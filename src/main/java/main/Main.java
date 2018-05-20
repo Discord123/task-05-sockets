@@ -15,7 +15,7 @@ public class Main {
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         ServiceImpl service = (ServiceImpl) serviceFactory.getService();
 
-        Document document = service.createDocument(0);
+        Document document = service.createDocument();
 
         List<Sentence> sentences = document.getSentencesInDocument();
 

@@ -6,6 +6,7 @@ import entity.Document;
 import entity.Sentence;
 import entity.Word;
 import service.Service;
+import service.util.ServiceUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +17,20 @@ public class ServiceImpl implements Service {
     private DAO dao = daoFactory.getDAO();
 
     @Override
-    public Document createDocument(int i) {
+    public Document createDocument() {
         Document document = new Document();
 
         List<Sentence> sentences = createSentenceList();
         document.setSentencesInDocument(sentences);
 
         return document;
+    }
+
+    @Override
+    public Document reBuildDocument(int i, Document document) {
+        Document reBuildDocument = ServiceUtil.reBuildDocument(i,document);
+
+        return reBuildDocument;
     }
 
     private List<Sentence> createSentenceList(){
@@ -48,12 +56,11 @@ public class ServiceImpl implements Service {
 
             for (Word w : list) {
                 words.add(w);
-                if(w.getWordName().contains(".")) {
+                if(w.getWordName().contains(".") || w.getWordName().contains("!") || w.getWordName().contains("?")) {
                     sentences.add(new Sentence(words));
                     words = new ArrayList<>();
                 }
             }
-
         }
         return sentences;
     }

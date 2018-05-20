@@ -3,5 +3,6 @@ package service;
 import entity.Document;
 
 public interface Service {
-    Document createDocument(int i);
+    Document createDocument();
+    Document reBuildDocument(int i, Document document);
 }
