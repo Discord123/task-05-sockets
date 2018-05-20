@@ -5,7 +5,7 @@ programming language. Java is designed for easy internet application and its acc
 Java supports polymorphism, inheritance and encapsulation. One important advantage of java is that it is portable,
 multi-threaded, dynamic and extensible. Java security has been well thought and designed for network programming.
     Java includes many development tools, techniques, classes, variables and applets.
-Java tools are comprise of Java Development Kit ( JDK) and it constitutes tools like java compiler and java interpreter.
+Java tools are comprise of Java Development Kit (JDK) and it constitutes tools like java compiler and java interpreter.
 (API) Application Programming Interface is the classes and methods that are part of Java Standard Library (JSL).
 Application Programming Interface constitutes many classes and methods that are grouped into several packages according
 to their functionality.

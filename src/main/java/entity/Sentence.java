@@ -7,9 +7,14 @@ import java.util.List;
 public class Sentence implements Serializable{
 
     private static final long serialVersionUID = 668707195864894563L;
-    private final List<Word> wordsInSentence = new ArrayList<>();
+    private final List<Word> wordsInSentence;
 
     public Sentence() {
+        wordsInSentence = new ArrayList<>();
+    }
+
+    public Sentence(List<Word> wordsInSentence) {
+        this.wordsInSentence = wordsInSentence;
     }
 
     public static long getSerialVersionUID() {

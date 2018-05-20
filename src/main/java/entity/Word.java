@@ -10,6 +10,10 @@ public class Word implements Serializable{
     public Word() {
     }
 
+    public Word(String wordName) {
+        this.wordName = wordName;
+    }
+
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }

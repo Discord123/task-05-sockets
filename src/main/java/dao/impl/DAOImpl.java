@@ -42,7 +42,7 @@ public class DAOImpl implements DAO {
         boolean nextLineAvailable = false;
 
         try {
-            nextLineAvailable = is.available() > 0;
+            nextLineAvailable = br.ready();
         } catch (IOException e) {
             System.out.println("IOException in nextLineAvailable method");
             e.printStackTrace();
