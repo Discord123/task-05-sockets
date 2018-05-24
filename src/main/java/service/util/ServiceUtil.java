@@ -4,7 +4,7 @@ import entity.Document;
 
 public class ServiceUtil {
 
-    public static Document reBuildDocument (int i, Document document) {
+    public synchronized static Document reBuildDocument (int i, Document document) {
         Document reBuildDocument = new Document();
 
 

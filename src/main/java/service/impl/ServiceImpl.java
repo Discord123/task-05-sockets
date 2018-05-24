@@ -41,7 +41,7 @@ public class ServiceImpl implements Service {
         return sentences;
     }
 
-    private List<Sentence> createSentenceFromWords() {
+    private synchronized List<Sentence> createSentenceFromWords() {
 
         List<Sentence> sentences = new ArrayList<>();
 
@@ -65,7 +65,7 @@ public class ServiceImpl implements Service {
         return sentences;
     }
 
-    private List<Word> createWordsFromLine(String line) {
+    private synchronized List<Word> createWordsFromLine(String line) {
         List<Word> words = new ArrayList<>();
 
         String textLine = line.trim();
